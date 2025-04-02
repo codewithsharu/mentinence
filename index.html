@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Restricted</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ff3333;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "⚠";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff0000;
+            z-index: -1;
+        }
+
+        .warning-container {
+            padding: 2.5rem;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3),
+                        inset 0 0 20px rgba(255, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+            background-color: rgba(20, 0, 0, 0.7);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(255, 0, 0, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.5), inset 0 0 30px rgba(255, 0, 0, 0.3); }
+            100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(255, 0, 0, 0.2); }
+        }
+
+        h1 {
+            color: #ff1a1a;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7),
+                         0 0 20px rgba(255, 0, 0, 0.5),
+                         0 0 30px rgba(255, 0, 0, 0.3);
+            animation: textGlow 1.5s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.5); }
+            to { text-shadow: 0 0 15px rgba(255, 0, 0, 0.9), 0 0 25px rgba(255, 0, 0, 0.7); }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ff6666;
+            text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+
+        .close-btn {
+            background-color: #cc0000;
+            color: white;
+            border: 2px solid #ff0000;
+            padding: 12px 35px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .close-btn:hover {
+            background-color: #ff0000;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-container">
+        <h1>⚠ Website Restricted By Developer ⚠<br>Due To Incomplete Payments Of<br>Development.</h1>
+        <p>If you are a site owner, contact to developer and make payment until 10th April 2025.<br>After this date all data of website will lost.</p>
+        <button class="close-btn">Close Page</button>
+    </div>
+</body>
+</html>
